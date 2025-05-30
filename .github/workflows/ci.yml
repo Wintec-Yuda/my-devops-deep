@@ -1,0 +1,17 @@
+name: CI Pipeline
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Check files
+      run: |
+        echo "Listing files"
+        ls -la
+        echo "Content of readme.md"
+        cat readme.md
+        echo "Content of index.html"
+        cat index.html
