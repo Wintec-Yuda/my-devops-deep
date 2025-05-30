@@ -18,3 +18,7 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t my-nginx .
+    - name: Build Python image
+      run: |
+        docker build -f Dockerfile-python -t my-python .
+        docker run my-python
