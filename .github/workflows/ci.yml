@@ -15,3 +15,6 @@ jobs:
         cat readme.md
         echo "Content of index.html"
         cat index.html
+    - name: Build Docker image
+      run: |
+        docker build -t my-nginx .
